@@ -5,4 +5,4 @@ resources:
   - service.yaml
 images:
   - name: kamaldocker29/kubernetes
-    newTag: latest
+    newTag: 941a5ed73793bf2ba13635bdefe1bcd20a3fbe77
