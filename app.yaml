@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: fastapi-deploy
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/akamal0029/deployrepo.git
+    targetRevision: master
+    path: .
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
